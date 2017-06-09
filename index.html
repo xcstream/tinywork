@@ -1,7 +1,25 @@
 <html>
 <meta charset='UTF-8'/>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
 <body>
-只是做了一些微小的工作
+ <div id="app">
+    <el-button @click="visible = true">吼啊</el-button>
+    <el-dialog v-model="visible" title="Hello world">
+      <p>只是做了一些微小的工作</p>
+    </el-dialog>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function(){
+        return { visible: false }
+      }
+    })
+  </script>
 </body>
 </html>
 
